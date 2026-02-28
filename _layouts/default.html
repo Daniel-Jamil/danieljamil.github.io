@@ -3,62 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} — {{ site.description }}
-    {% else %}
-      {{ page.title }} | {{ site.title }}
-    {% endif %}
-  </title>
-
+  <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-  <!-- RSS Feed -->
-  {% feed_meta %}
 </head>
-  <footer class="footer">
-  <div class="container footer-inner">
-    <div>© {{ site.time | date: "%Y" }} Daniel Jamil</div>
-    <div>
-      <a href="https://github.com/Daniel-Jamil" target="_blank" rel="noopener">GitHub</a>
-      &nbsp;•&nbsp;
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-</footer>
+
 <body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <a href="{{ '/' | relative_url }}">Daniel Jamil</a>
+        <span class="tagline">OCI • OCVS • VMware</span>
+      </div>
 
-<nav class="navbar">
-  <div class="container nav-content">
-
-    <div class="logo">
-      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <span class="tagline">OCI • OCVS • VMware</span>
+      <div class="nav-links">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/#articles' | relative_url }}">Articles</a>
+        <a href="https://github.com/Daniel-Jamil" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="nav-links">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/#articles' | relative_url }}">Articles</a>
-      <a href="https://github.com/Daniel-Jamil" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+  <main class="container main">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>© {{ site.time | date: "%Y" }} Daniel Jamil</div>
+      <div class="footer-links">
+        <a href="https://github.com/Daniel-Jamil" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-
-  </div>
-</nav>
-
-<main class="container">
-  {{ content }}
-</main>
-
+  </footer>
 </body>
 </html>
