@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Infrastructure Migration to OCI: Scenarios"
-date: 2026-11-01
+title: "Infrastructure Migration to OCI: Scenarios & Strategic Guidelines"
+date: 2025-11-01
 tags: [migration, oci, ocvs, vmware]
 guide: true
 summary: "Comprehensive migration framework covering VMware, physical x86, containers, cross-cloud replatforming, and OpenShift convergence to OCI."
 ---
 
-This guide provides scenario overview for migrating enterprise infrastructure to Oracle Cloud Infrastructure (OCI). It covers VMware and non-VMware virtualization, physical x86 servers, cross-cloud replatforming, OpenShift-based platform standardization, and mixed VM–container convergence paths.
+This guide provides a comprehensive technical framework for migrating enterprise infrastructure to Oracle Cloud Infrastructure (OCI). It covers VMware and non-VMware virtualization, physical x86 servers, cross-cloud replatforming, OpenShift-based platform standardization, and mixed VM–container convergence paths.
 
 ---
 
@@ -17,7 +17,7 @@ This guide defines the primary strategic pathways for transitioning an enterpris
 
 ---
 
-## Virtual Machines & Physical X86 Servers
+## 1. Virtual Machines & Physical X86 Servers
 
 - **VMware vSphere → Oracle Cloud VMware Solution (OCVS)**  
   Lift-and-shift preserving full VMware SDDC stack (ESXi, vCenter, vSAN, NSX). Enables L2 extension, IP retention, and live mobility using VMware HCX.
@@ -54,7 +54,7 @@ This guide defines the primary strategic pathways for transitioning an enterpris
 
 ---
 
-# OpenShift-Based Platform Migration
+## 2. OpenShift-Based Platform Migration
 
 - **Kubernetes → OpenShift on OCI**  
   Redeployment under BYOS model.
@@ -73,106 +73,7 @@ This guide defines the primary strategic pathways for transitioning an enterpris
 
 ---
 
-# Public Cloud to OCI
-
-- **AWS EC2 → OCI Native Compute**
-- **Azure / GCP → OCI Native Compute**
-
-Migration supported via OCM or RackWare.
-
----
-
-### Public Cloud Migration Diagram
-
-![Public Cloud to OCI Decision Tree]({{ '/assets/images/Public_Cloud_to_OCI_Decision_tree.jpg' | relative_url }})
-
----
-
-# When to Use This Guide
-
-Use this framework when planning:
-
-- Data center exit
-- Cross-cloud consolidation
-- VMware to OCI migrations
-- Hybrid container + VM convergence
-- DR modernization to OCI
-
----
-
-# Conclusion
-
-Enterprise migration to OCI requires structured assessment, architectural alignment, and disciplined execution.  ---
-layout: post
-title: "Infrastructure Migration to OCI: Scenarios & Strategic Guidelines"
-date: 2026-02-28
-tags: [migration, oci, ocvs, vmware]
-guide: true
-summary: "Comprehensive migration framework covering VMware, physical x86, containers, cross-cloud replatforming, and OpenShift convergence to OCI."
----
-
-This guide provides a comprehensive technical framework for migrating enterprise infrastructure to Oracle Cloud Infrastructure (OCI). It covers VMware and non-VMware virtualization, physical x86 servers, cross-cloud replatforming, OpenShift-based platform standardization, and mixed VM–container convergence paths.
-
----
-
-#  Migration Scenarios
-
-This guide defines the primary strategic pathways for transitioning an enterprise infrastructure estate from on-premises and multi-cloud environments to Oracle Cloud Infrastructure (OCI).
-
----
-
-##1.  Virtual Machines & Physical X86 Servers
-
-## Migration Paths to OCI
-
-| Source Platform | Target Platform | Approach | Description | Tooling / Enablers |
-|-----------------|----------------|----------|-------------|--------------------|
-| VMware vSphere | Oracle Cloud VMware Solution (OCVS) | Lift-and-shift | Preserves full VMware SDDC stack (ESXi, vCenter, vSAN, NSX). Enables L2 extension, IP retention, and live mobility | VMware HCX |
-| VMware vSphere | OCI Native Compute Instances | Replatform | Conversion of VMware VMs and adaptation to OCI native infrastructure | Oracle Cloud Migrations (OCM), RackWare |
-| Microsoft Hyper-V / KVM | OCI Native Compute Instances | Cross-hypervisor migration | VM format conversion and redeployment on OCI Compute | Oracle Cloud Migrations (OCM), RackWare |
-| Microsoft Hyper-V / KVM | Oracle Cloud VMware Solution (OCVS) | Platform consolidation | Migration into VMware SDDC running on OCI | HCX OS Assisted Migration (OSAM), RackWare |
-| Physical x86 Servers | OCI Native Compute / OCVS | OS-level migration | Replication-based migration of physical or legacy workloads | RackWare |
-
----
-
-### Decision Framework Diagram
-
-![Workload Migration Decision Tree]({{ '/assets/images/Workload_to_OCI_Decision_tree.jpg' | relative_url }})
-
----
-
-### Migration Matrix
-
-| Source Environment      | Target Platform | Tooling |
-|-------------------------|----------------|---------|
-| VMware vSphere | OCVS | VMware HCX |
-| VMware vSphere | OCI Native | OCM / RackWare |
-| Hyper-V / KVM | OCI Native | RackWare |
-| Hyper-V / KVM | OCVS | HCX OSAM / RackWare |
-| Physical x86 | OCI / OCVS | RackWare |
-
----
-
-##2. OpenShift-Based Platform Migration
-
-- **Kubernetes → OpenShift on OCI**  
-  Redeployment under BYOS model.
-
-- **OpenShift → OpenShift on OCI (MTC)**  
-  Migration Toolkit for Containers preserving namespaces and supported workloads.
-
-- **Mixed VM + Containers → OpenShift Virtualization on OCI**  
-  MTV for VMs + MTC for containers enabling operational convergence.
-
----
-
-### Container Migration Decision Diagram
-
-![Containers to OCI Decision Tree]({{ '/assets/images/Containers_to_OCI_Decision_tree.jpg' | relative_url }})
-
----
-
-##3. Public Cloud to OCI
+## 3. Public Cloud to OCI
 
 - **AWS EC2 → OCI Native Compute**
 - **Azure / GCP → OCI Native Compute**
@@ -203,4 +104,4 @@ Use this framework when planning:
 
 Enterprise migration to OCI requires structured assessment, architectural alignment, and disciplined execution.  
 
-This article provides validated pathways to enable secure, low-risk transformation while preserving operational continuity.
+This framework provides validated pathways to enable secure, low-risk transformation while preserving operational continuity.
