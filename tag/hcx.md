@@ -1,6 +1,7 @@
 ---
 layout: tag
 title: "Tag: HCX"
+tag: hcx
 permalink: /tag/hcx/
 ---
 
