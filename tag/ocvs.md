@@ -1,6 +1,7 @@
 ---
 layout: tag
-title: "Tag: OCVS"
+title: OCVS
+tag: ocvs
 permalink: /tag/ocvs/
 ---
 
