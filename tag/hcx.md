@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tag: HCX
+title: "Tag: HCX"
 permalink: /tag/hcx/
 ---
 
