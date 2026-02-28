@@ -9,17 +9,15 @@ summary: "Comprehensive migration framework covering VMware, physical x86, conta
 
 Moving your business to Oracle Cloud Infrastructure (OCI) involves several different paths depending on your current setup. This guide show migration paths how to move various systems, including:
 
-    VMware Environments: Moving your existing VMware virtual machines directly to OCI.
+VMware Environments: Moving your existing VMware virtual machines directly to OCI.
 
-    Other Virtualization & Physical Servers: Migrating non-VMware VMs or physical x86 hardware.
+Other Virtualization & Physical Servers: Migrating non-VMware VMs or physical x86 hardware.
 
-    Cross-Cloud Replatforming: Shifting workloads from other cloud providers to OCI.
+Cross-Cloud Replatforming: Shifting workloads from other cloud providers to OCI.
 
-    OpenShift Standardization: Using Red Hat OpenShift to create a uniform platform across your infrastructure.
+OpenShift Standardization: Using Red Hat OpenShift to create a uniform platform across your infrastructure.
 
-    Mixed Environments: Strategies for managing a combination of traditional virtual machines and modern containers.
-
----
+Mixed Environments: Strategies for managing a combination of traditional virtual machines and modern containers.
 
 # Migration Scenarios
 
