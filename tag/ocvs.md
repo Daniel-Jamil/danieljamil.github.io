@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: tag
 title: "Tag: OCVS"
 permalink: /tag/ocvs/
 ---
