@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mixed Containerized and VM Workloads to OpenShift Virtualization on OCI"
-date: 2026-02-28
+date: 2026-01-19
 tags: [migration, openshift, virtualization, oci, containers]
 guide: true
 summary: "Guide to consolidating virtual machines and containerized workloads on OpenShift Virtualization running on OCI — using MTV and MTC for phased platform convergence."
