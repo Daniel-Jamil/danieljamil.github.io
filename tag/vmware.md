@@ -1,6 +1,7 @@
 ---
 layout: tag
 title: "Tag: VMware"
+tag: vmware
 permalink: /tag/vmware/
 ---
 
