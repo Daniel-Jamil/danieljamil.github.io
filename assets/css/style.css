@@ -31,17 +31,21 @@ body{
   color: var(--text);
 
   background:
-    /* subtle light top glow */
-    radial-gradient(900px 520px at 15% 10%, rgba(56,189,248,0.10), transparent 65%),
+  /* bardzo subtelny glow TYLKO u góry */
+  radial-gradient(
+    900px 500px at 50% -200px,
+    rgba(56,189,248,0.08),
+    transparent 70%
+  ),
 
-    /* dramatic vertical depth */
-    linear-gradient(
-      to bottom,
-      var(--bg-top) 0%,
-      var(--bg-mid) 55%,
-      var(--bg-bottom) 100%
-    );
-}
+  /* dramatic depth */
+  linear-gradient(
+    to bottom,
+    #0f172a 0%,
+    #0c1424 55%,
+    #060d18 100%
+  );
+   
 
 /* Subtle grid visible across page */
 body::before{
