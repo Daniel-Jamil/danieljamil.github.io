@@ -4,8 +4,8 @@ title: Home
 ---
 
 <section class="hero">
-  <h1>Cloud Architecture. Migration. Strategy.</h1>
-  <p>OCI, OCVS and VMware deep dives — architecture patterns, troubleshooting and field notes.</p>
+  <h1>Oracle Cloud Architecture. Migration & Strategy.</h1>
+  <p>Deep dives into OCI, OCVS, VMware architecture patterns and expert guides.</p>
 
   <div class="hero-badges">
     <span class="badge">OCI</span>
@@ -31,7 +31,7 @@ title: Home
 <h2 class="section-title">About</h2>
 <div class="post-card">
   <p>
-    I’m Daniel — a virtualization & cloud architect focused on <strong>Oracle Cloud VMware Solution (OCVS)</strong>,
+    I’m Daniel — a virtualization & cloud architect at Oracle focused on <strong>Oracle Cloud VMware Solution (OCVS)</strong>,
     <strong>OCI</strong> and enterprise migrations. This blog is a practical notebook: design decisions, lessons learned,
     and repeatable patterns you can apply in real projects.
   </p>
