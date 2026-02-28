@@ -1,21 +1,54 @@
-title: Daniel Jamil
-description: OCI & OCVS | VMware Architect
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-url: "https://danieljamil.com"
-baseurl: ""
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }} — {{ site.description }}
+    {% else %}
+      {{ page.title }} | {{ site.title }}
+    {% endif %}
+  </title>
 
-# GitHub Pages / Jekyll basics
-markdown: kramdown
-permalink: /:categories/:year/:month/:day/:title/
-timezone: Europe/Madrid
+  <meta name="description" content="{{ site.description }}">
 
-# Better excerpts for cards
-excerpt_separator: "<!--more-->"
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
 
-# Build hygiene
-future: false
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-# Optional but recommended on GitHub Pages
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+  <!-- RSS Feed -->
+  {% feed_meta %}
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-content">
+
+    <div class="logo">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <span class="tagline">OCI • OCVS • VMware</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/#articles' | relative_url }}">Articles</a>
+      <a href="https://github.com/Daniel-Jamil" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+  </div>
+</nav>
+
+<main class="container">
+  {{ content }}
+</main>
+
+</body>
+</html>
