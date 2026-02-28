@@ -1,18 +1,26 @@
-/* ===== Base ===== */
+/* ===============================
+   Daniel Jamil — Dramatic Enterprise Dark Theme
+================================= */
+
 :root{
-  --bg: #0f172a;
+  --bg-top: #0f172a;
+  --bg-mid: #0c1424;
+  --bg-bottom: #060d18;
+
   --text: #e2e8f0;
   --muted: #94a3b8;
   --line: rgba(148,163,184,0.14);
   --card: rgba(30,41,59,0.55);
-  --card2: rgba(15,23,42,0.35);
   --accent: #38bdf8;
 }
 
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
 
-/* Layout: footer zawsze na dole */
+/* ===============================
+   Layout + Background
+================================= */
+
 body{
   margin: 0;
   min-height: 100vh;
@@ -23,51 +31,71 @@ body{
   color: var(--text);
 
   background:
-    radial-gradient(900px 520px at 15% 10%, rgba(56,189,248,0.14), transparent 60%),
-    radial-gradient(760px 520px at 85% 25%, rgba(99,102,241,0.12), transparent 55%),
-    var(--bg);
+    /* subtle light top glow */
+    radial-gradient(900px 520px at 15% 10%, rgba(56,189,248,0.10), transparent 65%),
+    radial-gradient(800px 500px at 85% 20%, rgba(99,102,241,0.08), transparent 60%),
+
+    /* dramatic vertical depth */
+    linear-gradient(
+      to bottom,
+      var(--bg-top) 0%,
+      var(--bg-mid) 55%,
+      var(--bg-bottom) 100%
+    );
 }
 
-/* Subtelna siatka w tle */
+/* Subtle grid visible across page */
 body::before{
   content:"";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
+
   background-image:
-    linear-gradient(rgba(148,163,184,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148,163,184,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(148,163,184,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,0.05) 1px, transparent 1px);
   background-size: 64px 64px;
-  mask-image: radial-gradient(640px 420px at 22% 18%, #000, transparent 70%);
 }
 
-/* Wszystko nad tłem */
-.navbar, .container, .footer, main{ position: relative; z-index: 1; }
+/* Everything above background */
+.navbar, .container, .footer, main{
+  position: relative;
+  z-index: 1;
+}
 
 .main{ flex: 1; }
 
-/* Links (bez fioletowych visited) */
+/* ===============================
+   Links
+================================= */
+
 a{ color: var(--accent); text-decoration: none; }
 a:hover{ opacity: 0.95; }
 a:visited{ color: var(--accent); }
 
-/* Container */
+/* ===============================
+   Container
+================================= */
+
 .container{
   max-width: 1020px;
   margin: 0 auto;
   padding: 28px 20px;
 }
 
-/* ===== Navbar ===== */
+/* ===============================
+   Navbar
+================================= */
+
 .navbar{
   position: sticky;
   top: 0;
   z-index: 50;
   border-bottom: 1px solid rgba(148,163,184,0.10);
-  background: rgba(15,23,42,0.72);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(15,23,42,0.70);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-content{
@@ -119,9 +147,12 @@ a:visited{ color: var(--accent); }
   background: rgba(30,41,59,0.55);
 }
 
-/* ===== Hero ===== */
+/* ===============================
+   Hero
+================================= */
+
 .hero{
-  padding: 52px 0 28px 0; /* mniej pustki */
+  padding: 52px 0 28px 0;
 }
 
 .hero h1{
@@ -155,7 +186,7 @@ a:visited{ color: var(--accent); }
   border-radius: 999px;
   color: #cbd5e1;
   font-size: 13px;
-  transition: transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
 }
 
 .badge:hover{
@@ -165,7 +196,10 @@ a:visited{ color: var(--accent); }
   color: var(--text);
 }
 
-/* ===== Sections ===== */
+/* ===============================
+   Sections
+================================= */
+
 .section-title{
   margin-top: 42px;
   margin-bottom: 14px;
@@ -185,11 +219,13 @@ a:visited{ color: var(--accent); }
   background: linear-gradient(90deg, rgba(148,163,184,0.18), rgba(148,163,184,0.02));
 }
 
-/* ===== Cards / Posts ===== */
+/* ===============================
+   Cards
+================================= */
+
 .post-card{
   background: var(--card);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(148,163,184,0.12);
   padding: 28px;
   border-radius: 18px;
@@ -200,17 +236,16 @@ a:visited{ color: var(--accent); }
 .post-card:hover{
   transform: translateY(-4px);
   border-color: rgba(56,189,248,0.28);
-  box-shadow: 0 14px 46px rgba(0,0,0,0.42);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.50);
 }
 
-/* Fix: linki w kartach nie fioletowe */
 .post-card a,
 .post-card a:visited{
   color: var(--accent);
 }
+
 .post-card a:hover{
-  color: var(--text);
-  opacity: 1;
+  color: #e2e8f0;
 }
 
 .post-meta{
@@ -222,39 +257,24 @@ a:visited{ color: var(--accent); }
 .post-card h3{
   margin: 0 0 10px 0;
   font-size: 18px;
-  letter-spacing: -0.01em;
 }
 
 .post-card p{
   margin: 0;
-  color: var(--text);
-  opacity: 0.95;
   line-height: 1.6;
   max-width: 78ch;
 }
 
-/* Typography inside content */
-.container h2, .container h3, .container h4{ color: #fff; }
-.container p{ color: var(--text); line-height: 1.7; }
+/* ===============================
+   Footer
+================================= */
 
-/* Utilities (optional) */
-.small-note{ color: var(--muted); font-size: 14px; }
-.muted{ color: var(--muted); }
-.lead{ color: var(--text); opacity: 0.92; line-height: 1.65; }
-.section-spacing{ margin-bottom: 10px; }
-
-.post-link{ color: var(--accent); }
-.post-link:hover{
-  text-decoration: underline;
-  text-decoration-color: rgba(56,189,248,0.55);
-  text-underline-offset: 3px;
-}
-
-/* ===== Footer ===== */
 .footer{
+  margin-top: 60px;
+  padding: 20px 0;
   border-top: 1px solid rgba(148,163,184,0.10);
-  padding: 22px 0;
-  margin-top: 40px;
+  background: rgba(15,23,42,0.65);
+  backdrop-filter: blur(10px);
 }
 
 .footer-content{
@@ -262,19 +282,28 @@ a:visited{ color: var(--accent); }
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  color: #94a3b8;
+  color: var(--muted);
   font-size: 12px;
 }
 
-.footer-links a{
-  color: #94a3b8;
-  text-decoration: none;
+.footer-links{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+.footer-links a{
+  color: var(--muted);
+}
+
 .footer-links a:hover{
   color: #e2e8f0;
 }
 
-/* ===== Responsive ===== */
+/* ===============================
+   Responsive
+================================= */
+
 @media (max-width: 760px){
   .hero h1{ font-size: 40px; }
   .hero p{ font-size: 17px; }
@@ -284,8 +313,8 @@ a:visited{ color: var(--accent); }
 }
 
 @media (max-width: 640px){
-  .hero h1{ font-size: 38px; }
-  .hero{ padding: 50px 0 30px; }
-  .nav-content{ gap: 12px; }
-  .footer-content{ flex-direction: column; align-items: flex-start; }
+  .footer-content{
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
