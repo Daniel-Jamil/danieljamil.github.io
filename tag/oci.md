@@ -1,6 +1,7 @@
 ---
 layout: tag
-title: "Tag: OCI"
+title: "Tag: OCI"]
+tag: oci
 permalink: /tag/oci/
 ---
 
