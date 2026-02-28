@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tag: DR
+title: "Tag: DR"
 permalink: /tag/dr/
 ---
 
