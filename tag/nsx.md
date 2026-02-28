@@ -1,6 +1,7 @@
 ---
 layout: tag
 title: "Tag: NSX"
+tag: nsx
 permalink: /tag/nsx/
 ---
 
