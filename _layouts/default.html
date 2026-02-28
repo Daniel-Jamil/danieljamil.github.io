@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
+title: Daniel Jamil
+description: OCI & OCVS | VMware Architect
 
-<nav class="navbar">
-  <div class="container nav-content">
-    <div class="logo">
-      <a href="{{ '/' | relative_url }}">Daniel Jamil</a>
-      <span class="tagline">OCI • OCVS • VMware</span>
-    </div>
+url: "https://danieljamil.com"
+baseurl: ""
 
-    <div class="nav-links">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/#articles' | relative_url }}">Articles</a>
-      <a href="https://github.com/Daniel-Jamil" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-</nav>
+# GitHub Pages / Jekyll basics
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+timezone: Europe/Madrid
 
-<div class="container">
-  {{ content }}
-</div>
+# Better excerpts for cards
+excerpt_separator: "<!--more-->"
 
-</body>
-</html>
+# Build hygiene
+future: false
+
+# Optional but recommended on GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
