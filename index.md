@@ -1,62 +1,47 @@
----
-layout: default
-title: Home
----
+/* ===== Home polish ===== */
+.muted { color: var(--muted); }
 
-<section class="hero">
-  <h1>Cloud Architecture. Migration. Strategy.</h1>
-  <p>OCI, OCVS and VMware deep dives — architecture patterns, troubleshooting and field notes.</p>
+.lead {
+  color: var(--text);
+  opacity: 0.92;
+  line-height: 1.65;
+}
 
-  <div class="hero-badges">
-    <span class="badge">OCI</span>
-    <span class="badge">OCVS</span>
-    <span class="badge">VMware</span>
-    <span class="badge">HCX</span>
-    <span class="badge">DR</span>
-  </div>
-</section>
+.section-spacing { margin-bottom: 10px; }
 
-<h2 id="articles" class="section-title">Latest articles</h2>
+.post-link{
+  color: var(--accent);
+  text-decoration: none;
+}
+.post-link:hover{
+  text-decoration: underline;
+  text-decoration-color: rgba(56,189,248,0.55);
+  text-underline-offset: 3px;
+}
 
-{% for post in site.posts limit:6 %}
-<div class="post-card">
-  <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  {% if post.excerpt %}
-    <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-  {% endif %}
-</div>
-{% endfor %}
+/* Better typography in cards */
+.post-card p{ max-width: 78ch; }
 
-<h2 class="section-title">About</h2>
-<div class="post-card">
-  <p>
-    I’m Daniel — a virtualization & cloud architect focused on <strong>Oracle Cloud VMware Solution (OCVS)</strong>,
-    <strong>OCI</strong> and enterprise migrations. This blog is a practical notebook: design decisions, lessons learned,
-    and repeatable patterns you can apply in real projects.
-  </p>
-  <p style="margin:0;">
-    Expect content on: landing zones, connectivity, DNS, vSphere/NSX, HCX, DR architectures, sizing and performance.
-  </p>
-</div>
+/* Slightly nicer separators between sections */
+.section-title{
+  position: relative;
+}
+.section-title::after{
+  content:"";
+  display:block;
+  height: 1px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, rgba(148,163,184,0.22), transparent);
+}
 
-<h2 class="section-title">Popular topics</h2>
-<div class="hero-badges" style="margin-bottom:10px;">
-  <a class="badge" href="/tag/ocvs/">OCVS</a>
-  <a class="badge" href="/tag/oci/">OCI</a>
-  <a class="badge" href="/tag/vmware/">VMware</a>
-  <a class="badge" href="/tag/hcx/">HCX</a>
-  <a class="badge" href="/tag/nsx/">NSX</a>
-  <a class="badge" href="/tag/dr/">DR</a>
-</div>
+/* CTA badges for external links */
+.badge-cta{
+  border-color: rgba(56,189,248,0.28);
+}
+.badge-cta:hover{
+  border-color: rgba(56,189,248,0.45);
+}
 
-<h2 class="section-title">Get updates</h2>
-<div class="post-card">
-  <p style="margin-top:0;">
-    New posts are published as I work through real customer scenarios. Bookmark the site or connect on LinkedIn.
-  </p>
-  <div class="hero-badges">
-    <a class="badge" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-    <a class="badge" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-</div>
+/* Reduce huge empty space feeling on tall screens */
+.hero{ padding: 52px 0 28px 0; }
+.container{ padding-bottom: 64px; }
