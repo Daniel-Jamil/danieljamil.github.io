@@ -2,7 +2,7 @@
 layout: post
 title: "OCVS Consolidation Ratios: How to Model 2:1, 4:1 and 6–8:1 Safely"
 date: 2026-02-18
-tags: [ocvs, sizing, vmware, architecture, performance]
+tags: [ocvs, sizing, vmware, performance]
 guide: true
 summary: "Deep dive into OCVS CPU consolidation ratios — mission critical (2:1), general workloads (4:1), dev/test (6–8:1), including failure-state modeling and architectural implications."
 ---
