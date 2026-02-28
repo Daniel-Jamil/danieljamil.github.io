@@ -1,17 +1,27 @@
 ---
 layout: post
-title: "Infrastructure Migration to OCI: Scenarios & Strategic Guidelines"
+title: "Infrastructure Migration to OCI: Scenarios
 date: 2025-11-01
 tags: [migration, oci, ocvs, vmware]
 guide: true
 summary: "Comprehensive migration framework covering VMware, physical x86, containers, cross-cloud replatforming, and OpenShift convergence to OCI."
 ---
 
-This guide provides a comprehensive technical framework for migrating enterprise infrastructure to Oracle Cloud Infrastructure (OCI). It covers VMware and non-VMware virtualization, physical x86 servers, cross-cloud replatforming, OpenShift-based platform standardization, and mixed VM–container convergence paths.
+Moving your business to Oracle Cloud Infrastructure (OCI) involves several different paths depending on your current setup. This guide show migration paths how to move various systems, including:
+
+    VMware Environments: Moving your existing VMware virtual machines directly to OCI.
+
+    Other Virtualization & Physical Servers: Migrating non-VMware VMs or physical x86 hardware.
+
+    Cross-Cloud Replatforming: Shifting workloads from other cloud providers to OCI.
+
+    OpenShift Standardization: Using Red Hat OpenShift to create a uniform platform across your infrastructure.
+
+    Mixed Environments: Strategies for managing a combination of traditional virtual machines and modern containers.
 
 ---
 
-# 1️⃣ Migration Scenarios
+# Migration Scenarios
 
 This guide defines the primary strategic pathways for transitioning an enterprise infrastructure estate from on-premises and multi-cloud environments to Oracle Cloud Infrastructure (OCI).
 
