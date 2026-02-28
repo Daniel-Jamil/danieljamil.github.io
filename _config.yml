@@ -1,4 +1,21 @@
 title: Daniel Jamil
 description: OCI & OCVS | VMware Architect
+
 url: "https://danieljamil.com"
 baseurl: ""
+
+# GitHub Pages / Jekyll basics
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+timezone: Europe/Madrid
+
+# Better excerpts for cards
+excerpt_separator: "<!--more-->"
+
+# Build hygiene
+future: false
+
+# Optional but recommended on GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
