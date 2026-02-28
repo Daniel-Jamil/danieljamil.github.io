@@ -60,9 +60,7 @@ a {
 }
 
 /* HERO */
-.hero {
-  padding: 90px 0 50px 0;
-}
+.hero { padding: 70px 0 45px 0; }
 
 .hero h1 {
   font-size: 56px;
@@ -128,4 +126,23 @@ a {
   color: #94a3b8;
   font-size: 12px;
   margin-bottom: 8px;
+}
+
+body{
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(56,189,248,0.12), transparent 60%),
+    radial-gradient(700px 450px at 85% 25%, rgba(99,102,241,0.10), transparent 55%),
+    #0f172a;
+}
+
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148,163,184,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(600px 400px at 20% 20%, black, transparent 70%);
 }
