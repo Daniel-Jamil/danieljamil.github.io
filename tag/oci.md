@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tag: OCI
+title: "Tag: OCI"
 permalink: /tag/oci/
 ---
 
