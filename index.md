@@ -17,6 +17,25 @@ title: Home
   </div>
 </section>
 
+<h2 class="section-title">Architecture guides</h2>
+
+{% assign guides = site.posts | where: "guide", true %}
+{% for post in guides limit:4 %}
+  <div class="post-card">
+    <div class="post-meta">Guide • {{ post.date | date: "%Y-%m-%d" }}</div>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    {% if post.summary %}
+      <p>{{ post.summary }}</p>
+    {% elsif post.excerpt %}
+      <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+    {% endif %}
+  </div>
+{% endfor %}
+
+<div class="hero-badges section-spacing">
+  <a class="badge badge-cta" href="{{ '/guides/' | relative_url }}">View all guides</a>
+</div>
+
 <h2 id="articles" class="section-title">Latest articles</h2>
 
 {% for post in site.posts limit:6 %}
