@@ -85,3 +85,51 @@ a {
   color: #38bdf8;
   text-decoration: none;
 }
+.hero {
+  padding: 110px 0 70px 0;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #94a3b8;
+  max-width: 720px;
+  margin: 0 0 22px 0;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #1e293b;
+  background: rgba(30,41,59,0.6);
+  border-radius: 999px;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.post-meta {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  margin-top: 30px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #cbd5e1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
