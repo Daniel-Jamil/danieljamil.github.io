@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tag: VMware
+title: "Tag: VMware"
 permalink: /tag/vmware/
 ---
 
