@@ -1,6 +1,7 @@
 ---
-layout: default
-title: "Tag: Migration"
+layout: tag
+title: Migration
+tag: migration
 permalink: /tag/migration/
 ---
 
