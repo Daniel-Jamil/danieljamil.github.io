@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tag: NSX
+title: "Tag: NSX"
 permalink: /tag/nsx/
 ---
 
