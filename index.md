@@ -12,6 +12,7 @@ title: Home
     <span class="badge">OCVS</span>
     <span class="badge">VMware</span>
     <span class="badge">HCX</span>
+    <span class="badge">Migration</span>
     <span class="badge">DR</span>
   </div>
 </section>
@@ -47,6 +48,7 @@ title: Home
   <a class="badge" href="/tag/vmware/">VMware</a>
   <a class="badge" href="/tag/hcx/">HCX</a>
   <a class="badge" href="/tag/nsx/">NSX</a>
+  <a class="badge" href="/tag/migration/">Migration</a>
   <a class="badge" href="/tag/dr/">DR</a>
 </div>
 
