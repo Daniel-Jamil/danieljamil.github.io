@@ -7,14 +7,14 @@ title: Home
   <h1>Cloud Architecture. Migration. Strategy.</h1>
   <p>Deep dives into OCI, OCVS, VMware architecture patterns, Migration and DR guides.</p>
 
-  <div class="hero-badges">
-    <span class="badge">OCI</span>
-    <span class="badge">OCVS</span>
-    <span class="badge">VMware</span>
-    <span class="badge">HCX</span>
-    <span class="badge">Migration</span>
-    <span class="badge">DR</span>
-  </div>
+<div class="hero-badges">
+  <a class="badge" href="{{ '/tag/oci/' | relative_url }}">OCI</a>
+  <a class="badge" href="{{ '/tag/ocvs/' | relative_url }}">OCVS</a>
+  <a class="badge" href="{{ '/tag/vmware/' | relative_url }}">VMware</a>
+  <a class="badge" href="{{ '/tag/hcx/' | relative_url }}">HCX</a>
+  <a class="badge" href="{{ '/tag/migration/' | relative_url }}">Migration</a>
+  <a class="badge" href="{{ '/tag/dr/' | relative_url }}">DR</a>
+</div>
 </section>
 
 <h2 class="section-title">Architecture guides</h2>
