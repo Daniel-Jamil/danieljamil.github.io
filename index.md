@@ -5,7 +5,7 @@ title: Home
 
 <section class="hero">
   <h1>Cloud Architecture. Migration. Strategy.</h1>
-  <p>Deep dives into OCI, OCVS, VMware architecture patterns and expert guides.</p>
+  <p>Deep dives into OCI, OCVS, VMware architecture patterns, Migration and DR guides.</p>
 
   <div class="hero-badges">
     <span class="badge">OCI</span>
