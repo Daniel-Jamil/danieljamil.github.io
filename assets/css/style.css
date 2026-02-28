@@ -1,9 +1,13 @@
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: #0f172a;
   color: #e2e8f0;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
 }
 
 .container {
@@ -12,6 +16,7 @@ body {
   padding: 40px 20px;
 }
 
+/* NAV */
 .navbar {
   background: #0f172a;
   border-bottom: 1px solid #1e293b;
@@ -31,61 +36,32 @@ body {
   text-decoration: none;
 }
 
-.nav-links a {
-  margin-left: 20px;
+.tagline {
+  margin-left: 10px;
+  font-size: 12px;
   color: #94a3b8;
-  text-decoration: none;
+  border: 1px solid #1e293b;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(30, 41, 59, 0.4);
+}
+
+.nav-links a {
+  margin-left: 18px;
+  color: #94a3b8;
   font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
 }
 
 .nav-links a:hover {
-  color: #38bdf8;
+  color: #e2e8f0;
+  background: rgba(30, 41, 59, 0.6);
 }
+
+/* HERO */
 .hero {
   padding: 90px 0 50px 0;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #94a3b8;
-  max-width: 600px;
-}
-
-.section-title {
-  margin-top: 60px;
-  margin-bottom: 30px;
-  font-size: 24px;
-}
-
-.post-card {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  transition: 0.2s ease;
-}
-
-.post-card:hover {
-  transform: translateY(-4px);
-  background: #334155;
-}
-
-.post-card h3 {
-  margin-top: 0;
-}
-
-a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-.hero {
-  padding: 110px 0 70px 0;
 }
 
 .hero h1 {
@@ -93,6 +69,7 @@ a {
   line-height: 1.05;
   margin: 0 0 18px 0;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .hero p {
@@ -112,18 +89,13 @@ a {
   display: inline-block;
   padding: 8px 12px;
   border: 1px solid #1e293b;
-  background: rgba(30,41,59,0.6);
+  background: rgba(30, 41, 59, 0.6);
   border-radius: 999px;
   color: #cbd5e1;
   font-size: 13px;
 }
 
-.post-meta {
-  color: #94a3b8;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-
+/* SECTION + POSTS */
 .section-title {
   margin-top: 30px;
   margin-bottom: 18px;
@@ -132,26 +104,28 @@ a {
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
-.tagline {
-  margin-left: 10px;
+
+.post-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  padding: 28px;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  transition: all 0.25s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.post-card h3 {
+  margin-top: 0;
+}
+
+.post-meta {
+  color: #94a3b8;
   font-size: 12px;
-  color: #94a3b8;
-  border: 1px solid #1e293b;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(30,41,59,0.4);
-}
-
-.nav-links a {
-  margin-left: 18px;
-  color: #94a3b8;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 8px 10px;
-  border-radius: 10px;
-}
-
-.nav-links a:hover {
-  color: #e2e8f0;
-  background: rgba(30,41,59,0.6);
+  margin-bottom: 8px;
 }
