@@ -273,3 +273,95 @@ a:visited{ color: var(--accent); }
 /* Reduce huge empty space feeling on tall screens */
 .hero{ padding: 52px 0 28px 0; }
 .container{ padding-bottom: 64px; }
+
+/* --- PATCH: polish + footer + better bottom spacing --- */
+
+/* fix visited links turning purple */
+.post-card a,
+.post-card a:visited {
+  color: #38bdf8;
+}
+.post-card a:hover {
+  color: #e2e8f0;
+}
+
+/* nicer reading width inside cards */
+.post-card p {
+  max-width: 78ch;
+}
+
+/* sticky + blur navbar (pro feel) */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(15,23,42,0.72);
+}
+
+/* consistent spacing between sections */
+.section-title{
+  margin-top: 42px;
+}
+
+/* make the bottom of the page feel "finished" */
+.container{
+  padding-bottom: 90px;
+}
+
+/* GET UPDATES / badges: tighten a bit */
+.hero-badges{
+  margin-top: 14px;
+}
+.badge{
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.badge:hover{
+  transform: translateY(-1px);
+  border-color: rgba(56,189,248,0.35);
+  background: rgba(30,41,59,0.75);
+}
+
+/* Optional: subtle divider line under section titles */
+.section-title{
+  position: relative;
+  padding-bottom: 10px;
+}
+.section-title::after{
+  content:"";
+  display:block;
+  height:1px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, rgba(148,163,184,0.18), rgba(148,163,184,0.02));
+}
+
+/* Footer (add in default.html: <footer class="footer">...</footer>) */
+.footer{
+  border-top: 1px solid rgba(148,163,184,0.12);
+  margin-top: 70px;
+  padding: 26px 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+.footer .footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer a{
+  color: #94a3b8;
+}
+.footer a:hover{
+  color: #e2e8f0;
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .hero h1 { font-size: 38px; }
+  .hero { padding: 50px 0 30px; }
+  .nav-content { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .nav-links a { margin-left: 0; }
+  .footer .footer-inner{ flex-direction: column; align-items: flex-start; }
+}
