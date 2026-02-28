@@ -17,7 +17,7 @@ title: Home
 </div>
 </section>
 
-<h2 class="section-title">Architecture guides</h2>
+<h2 class="section-title">Workload migration framework</h2>
 
 {% assign guides = site.posts | where: "guide", true %}
 {% for post in guides limit:4 %}
