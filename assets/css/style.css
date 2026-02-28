@@ -365,3 +365,37 @@ a:visited{ color: var(--accent); }
   .nav-links a { margin-left: 0; }
   .footer .footer-inner{ flex-direction: column; align-items: flex-start; }
 }
+/* layout: push footer to bottom */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+/* footer */
+.footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.10);
+  padding: 22px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #e2e8f0;
+}
